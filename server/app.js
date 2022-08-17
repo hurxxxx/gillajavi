@@ -1,5 +1,6 @@
 const createError = require('http-errors');
 const express = require('express');
+require('express-async-errors');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
@@ -8,6 +9,7 @@ const bodyParser = require('body-parser');
 const indexRouter = require('./router/index');
 const usersRouter = require('./router/users');
 const apiRouter = require('./router/api');
+
 
 const app = express();
 
@@ -30,9 +32,11 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
+
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
+  console.log(err.message);
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 

@@ -1,0 +1,6 @@
+vue 기본셋팅
+https://hj-tilblog.tistory.com/75
+
+vue 프로젝트 기본 구조
+https://joshua1988.github.io/web-development/vuejs/vue-structure/
+

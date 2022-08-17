@@ -4,14 +4,7 @@ const datas = require("../datasource");
 const { v4: uuidv4 } = require('uuid');
 
 router.get('/', function(req, res, next) {
-  datas.db.any("select * from gj_users").then(function (data) {
-    console.log("DATA:", data.value);
-    res.send(data)
-  })
-  .catch(function (error) {
-      console.log("ERROR:", error);
-      res.send(error)
-  });
+  res.send("no data")
   
 });
 
